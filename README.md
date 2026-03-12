@@ -1,34 +1,64 @@
-# qTip2 is no longer maintained. Consider moving to a newer library if you need support or new features!
-
--------
-
-[![Build Status](https://travis-ci.org/qTip2/qTip2.svg)](https://travis-ci.org/qTip2/qTip2)
-[![devDependency Status](https://david-dm.org/qTip2/qTip2/dev-status.svg?theme=shields.io)](https://david-dm.org/qTip2/qTip2#info=devDependencies)
-[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/qtip2/badge?style=rounded)](https://www.jsdelivr.com/package/npm/qtip2)
-[![Join the chat at https://gitter.im/qTip2/qTip2](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/qTip2/qTip2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[qTip<sup>2</sup>][site] - Pretty powerful tooltips
+[qTip<sup>4</sup>][qtip4] - Pretty powerful tooltips (a fork of famous qTip2 Plugin compatible with jQuery4+)
 ================================
 
-Introducing&hellip; qTip<sup>2</sup>. The second generation of the advanced qTip plugin for the ever popular jQuery framework.
 
-Building on 1.0's user friendly, yet feature rich base, qTip<sup>2</sup> provides you with tonnes of features like
-[speech bubble tips][tips] and [imagemap support][imgmap], and best of all... **it's completely free under the MIT license!**
+## Motivation
 
-More documentation and information is available at the [official site][site].
+[qtip2] is no longer maintained. This Library is a fork of famous [qtip2][qtip2] Plugin compatible with jQuery4+.
+
+**Consider moving to [qTip4][qtip4] library only if you need support for older web applications!**
+
+
+## Introduction
+
+Introducing&hellip; qTip<sup>4</sup>. The fourth generation of the advanced qTip plugin for the ever popular jQuery framework.
+
+Building on qTip2's user friendly, yet feature rich base, qTip<sup>4</sup> provides you with tonnes of features like
+[speech bubble tips][tips] and [imagemap support][imgmap], Without support for older browsers like IE+6 that are no longer in use and best of all... **it's completely free under the MIT license!**
+
+More documentation and information is available at the [GitHub Repository][qtip4].
 
 ## Browser support
 <div style="text-transform: sub; text-align: center;">
-  <img src="http://media1.juggledesign.com/qtip2/images/browsers/64-chrome.png" title="Chrome 8+" /> 8+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="http://media1.juggledesign.com/qtip2/images/browsers/64-firefox.png" title="Firefox 3+" /> 3+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="http://media1.juggledesign.com/qtip2/images/browsers/64-ie.png" title="Internet Explorer 6+" /> 6+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="http://media1.juggledesign.com/qtip2/images/browsers/64-opera.png" title="Opera 9+" /> 9+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="http://media1.juggledesign.com/qtip2/images/browsers/64-safari.png" title="Safari 2+, iOS 4+" /> 2+, iOS 4+
+  <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/main-desktop-browser-logos.png" title="Browser Support" width="20%" /> 
 </div>
 
-## Getting qTip<sup>2</sup>
+## Getting qTip<sup>4</sup>
 
-Grab the latest releases of qTip<sup>2</sup> from the [cdnjs][cdnjs] or [jsDelivr][jsdelivr] [CDN][wikipedia-cdn]s.
+Grab the latest releases of qTip<sup>4</sup> from the [GitHub Repository][qtip4] using git command.
+
+```
+git clone https://github.com/ranwitter/qTip4.git
+```
+
+## Building, Testing and Releasing qTip<sup>4</sup>
+
+```
+Lifecycle scripts included in qtip4 are:
+
+  start
+    grunt
+  test
+    grunt lint
+  preversion
+    npm test
+  version
+    npm run build:stable && npm run version:add
+  postversion
+    git push --follow-tags && npm publish
+  build
+    npm install && grunt
+  build:all
+    grunt all
+  build:stable
+    grunt all --stable && npm run build:bower
+  build:bower
+    node generate-bower.json
+  version:add
+    git add dist bower.json
+  recompile
+    npm run build:all && git commit dist -m "Recompile distributable files"; git push
+```
 
 ## Documentation
 Take a look at the [documentation][docs] for extensive docs and guides.
@@ -37,7 +67,7 @@ Take a look at the [documentation][docs] for extensive docs and guides.
 See the official [Changelog][changelog]
 
 ## Questions or problems?
-I don't actively maintain this project anymore. Make sure to check out the [thorough documentation][docs].
+Make sure to check out the [thorough documentation][docs].
 
 ## License
 Copyright (c) 2011-2020 Craig Michael Thompson. Licensed under the MIT license. *See [here][license] for more details.*
@@ -45,7 +75,7 @@ Copyright (c) 2011-2020 Craig Michael Thompson. Licensed under the MIT license. 
 ## Special thanks
 Big shout-out to ["Cowboy" Ben Alman][cowboy] for providing the [grunt][grunt] build system used by qTip<sup>2</sup>
 
-[site]: https://github.com/qTip2/qTip2/
+
 [styles]: https://github.com/qTip2/qTip2/wiki/Style-Guide
 [docs]: https://github.com/qTip2/qTip2/wiki
 [changelog]: https://github.com/qTip2/qTip2/wiki/Changelog
@@ -61,3 +91,5 @@ Big shout-out to ["Cowboy" Ben Alman][cowboy] for providing the [grunt][grunt] b
 [wikipedia-cdn]: http://en.wikipedia.org/wiki/Content_delivery_network "Content Delivery Network"
 [cdnjs]: http://cdnjs.com/libraries/qtip2/
 [jsdelivr]: http://www.jsdelivr.com/#!qtip2
+[qtip4]: https://github.com/ranwitter/qTip4/
+[qtip2]: https://github.com/qTip2/qTip2/
