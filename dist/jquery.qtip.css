@@ -1,13 +1,13 @@
 /*
- * qTip2 - Pretty powerful tooltips - v3.0.3
- * http://qtip2.com
+ * qTip4 - Pretty powerful tooltips - version: 4.0.0
+ * https://github.com/ranwitter/qTip4
  *
- * Copyright (c) 2016 
+ * Copyright (c) 2026 
  * Released under the MIT licenses
  * http://jquery.org/license
  *
- * Date: Wed May 11 2016 10:31 GMT+0100+0100
- * Plugins: tips modal viewport svg imagemap ie6
+ * Date: 2026-03-12 13:56:17
+ * Plugins: tips modal viewport svg imagemap
  * Styles: core basic css3
  */
 .qtip{
@@ -64,8 +64,6 @@
 			right: 4px; top: 50%;
 			margin-top: -9px;
 		}
-
-		* html .qtip-titlebar .qtip-close{ top: 16px; } /* IE fix */
 
 		.qtip-titlebar .ui-icon,
 		.qtip-icon .ui-icon{
@@ -234,7 +232,7 @@
 	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
-/* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+/* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, Safari 2+ */
 .qtip-rounded,
 .qtip-tipsy,
 .qtip-bootstrap{
@@ -313,17 +311,6 @@
 	-moz-box-shadow: 0 0 12px #333;
 	box-shadow: 0 0 12px #333;
 }
-
-	/* IE Specific */
-	.qtip-jtools .qtip-titlebar{
-		background-color: transparent;
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A);
-		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A)";
-	}
-	.qtip-jtools .qtip-content{
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323);
-		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323)";
-	}
 
 	.qtip-jtools .qtip-titlebar,
 	.qtip-jtools .qtip-content{
@@ -444,9 +431,6 @@
 
 /**
  * Twitter Bootstrap style.
- *
- * Tested with IE 8, IE 9, Chrome 18, Firefox 9, Opera 11.
- * Does not work with IE 7.
  */
 .qtip-bootstrap{
 	/** Taken from Bootstrap body */
@@ -549,14 +533,6 @@
 		}
 
 
-/* IE9 fix - removes all filters */
-.qtip:not(.ie9haxors) div.qtip-content,
-.qtip:not(.ie9haxors) div.qtip-titlebar{
-	filter: none;
-	-ms-filter: none;
-}
-
-
 .qtip .qtip-tip{
 	margin: 0 auto;
 	overflow: hidden;
@@ -571,7 +547,6 @@
 	}
 
 	.qtip .qtip-tip,
-	.qtip .qtip-tip .qtip-vml,
 	.qtip .qtip-tip canvas{
 		position: absolute;
 
@@ -581,12 +556,6 @@
 	}
 
 	.qtip .qtip-tip canvas{ top: 0; left: 0; }
-
-	.qtip .qtip-tip .qtip-vml{
-		behavior: url(#default#VML);
-		display: inline-block;
-		visibility: visible;
-	}
 
 
 #qtip-overlay{
@@ -610,8 +579,3 @@
 		filter:alpha(opacity=70);
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 	}
-
-
-.qtipmodal-ie6fix{
-	position: absolute !important;
-}

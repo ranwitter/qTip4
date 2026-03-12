@@ -1,12 +1,12 @@
 /*
- * qTip4 - Pretty powerful tooltips - version: 4.0.0
+ * qTip4 - Pretty powerful tooltips - version: @VERSION
  * https://github.com/ranwitter/qTip4
  *
  * Copyright (c) 2026 
  * Released under the MIT licenses
  * http://jquery.org/license
  *
- * Date: 2026-03-12 13:56:17
+ * Date: @DATE
  * Plugins included: svg, ajax, tips, modal, viewport, imagemap
  */
 
