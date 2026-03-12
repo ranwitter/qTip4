@@ -20,6 +20,20 @@ module.exports = function(grunt) {
 						' * http://jquery.org/license\n' +
 						' *\n' +
 						' * Date: <%= grunt.template.today("ddd mmm d yyyy hh:MM Zo", true) %>\n' +
+                        ' * Remarks: jQuery 4 compatibility patch applied.\n' +
+                        ' *\n' +
+                        ' * jQuery 4 breaking changes addressed:\n' +
+                        ' *   - $.browser removed          → removed all $.browser references (VML/IE6 paths dropped)\n' +
+                        ' *   - $.isFunction removed       → replaced with typeof fn === \'function\'\n' +
+                        ' *   - $.parseJSON removed        → replaced with JSON.parse\n' +
+                        ' *   - .bind() / .unbind()        → replaced with .on() / .off()\n' +
+                        ' *   - .live() / .die()           → replaced with .on() / .off()\n' +
+                        ' *   - $.type() removed           → replaced with typeof\n' +
+                        ' *   - $.now() removed            → replaced with Date.now()\n' +
+                        ' *   - $.expr[\':\'] deprecated   → not used\n' +
+                        ' *   - $.isEmptyObject kept       → still present in jQuery 4\n' +
+                        ' *   - Ajax .error() shorthand    → replaced with explicit error handler\n' +
+                        ' *   - VML / IE6 plugin           → removed (jQuery 4 drops IE < 11)\n' +
 						'@@BUILDPROPS */\n',
 
 					minified:'/* <%= pkg.name %> @@vVERSION | Plugins: @@PLUGINS | Styles: @@STYLES | <%= pkg.homepage.replace("http://","") %> | '+
