@@ -1,8 +1,8 @@
 {
-  "name": "qtip4-init",
-  "version": "1.0.0",
+  "name": "qtip4",
+  "version": "4.0.0",
   "private": true,
-  "description": "Source + build setup for qTip4 output files",
+  "description": "qTip4 - Pretty powerful tooltips (a fork of famous qTip2 Plugin compatible with jQuery4+)",
   "scripts": {
     "build": "grunt build",
     "watch": "grunt watch"
