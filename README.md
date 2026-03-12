@@ -31,33 +31,22 @@ Grab the latest releases of qTip<sup>4</sup> from the [GitHub Repository][qtip4]
 git clone https://github.com/ranwitter/qTip4.git
 ```
 
-## Building, Testing and Releasing qTip<sup>4</sup>
+## Building and Releasing qTip<sup>4</sup>
 
-```
 Lifecycle scripts included in qtip4 are:
 
-  start
-    grunt
-  test
-    grunt lint
-  preversion
-    npm test
-  version
-    npm run build:stable && npm run version:add
-  postversion
-    git push --follow-tags && npm publish
-  build
-    npm install && grunt
-  build:all
-    grunt all
-  build:stable
-    grunt all --stable && npm run build:bower
-  build:bower
-    node generate-bower.json
-  version:add
-    git add dist bower.json
-  recompile
-    npm run build:all && git commit dist -m "Recompile distributable files"; git push
+### Install
+```
+    npm install
+```
+
+### Build and release
+
+```
+    git tag 4.x.x -a -m "Release Version 4.x.x"
+    npm run build
+    git push
+
 ```
 
 ## Documentation
